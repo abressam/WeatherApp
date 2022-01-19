@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Clima</string>
+    <string name="location_text">Curitiba, PR, Brasil</string>
+    <string name="seg_text">Seg</string>
+    <string name="date_text">19 jan 2022</string>
+    <string name="weather_condition_text">Parcialmente nublado</string>
+</resources>
