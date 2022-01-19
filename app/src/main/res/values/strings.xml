@@ -6,4 +6,9 @@
     <string name="location_icon">Location icon</string>
     <string name="seg_text">Seg</string>
     <string name="date_text">19 jan 2022</string>
+    <string name="main_temperature_text">24 ºC</string>
+    <string name="cloudy_sun">Cloudy sun</string>
+    <string name="weather_condition_text">Parcialmente nublado</string>
+    <string name="under_line">Under line</string>
+    <string name="thermometer_text">Thermometer icon</string>
 </resources>

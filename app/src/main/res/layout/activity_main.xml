@@ -13,7 +13,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -24,11 +24,13 @@
         android:id="@+id/menu_button"
         android:layout_width="49dp"
         android:layout_height="36dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="@string/menu_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/menubutton"
         tools:ignore="ImageContrastCheck" />
 
@@ -61,13 +63,16 @@
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/roboto_slab"
         android:text="@string/seg_text"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/location"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -82,5 +87,76 @@
         app:layout_constraintStart_toStartOf="@+id/day"
         app:layout_constraintTop_toBottomOf="@+id/day"
         tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/main_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/main_temperature_text"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dayBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintVertical_bias="0.153"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/cloudy_sun"
+        android:layout_width="84dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/cloudy_sun"
+        app:layout_constraintBottom_toBottomOf="@+id/main_temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837"
+        app:srcCompat="@drawable/cloudysun"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/weather_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/weather_condition_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_temperature"
+        app:layout_constraintVertical_bias="0.050000012"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/under_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather_condition"
+        app:layout_constraintVertical_bias="0.00999999"
+        app:srcCompat="@drawable/whiteline"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/under_line" />
+
+    <ImageView
+        android:id="@+id/thermometer"
+        android:layout_width="18dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dayBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/under_line"
+        app:layout_constraintVertical_bias="0.048"
+        app:srcCompat="@drawable/thermometer"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/thermometer_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
