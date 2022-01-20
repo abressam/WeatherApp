@@ -161,11 +161,11 @@
         android:contentDescription="@string/thermometer_text" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/fahrenheit_button"
         android:layout_width="58dp"
         android:layout_height="54dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
         android:background="?android:selectableItemBackground"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -173,8 +173,21 @@
         app:srcCompat="@drawable/whitecircle"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
+    <ImageButton
+        android:id="@+id/celsius_button"
+        android:layout_width="58dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheit_button"
+        app:srcCompat="@drawable/whitecircle"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
     <TextView
-        android:id="@+id/fahrenheit_symbol"
+        android:id="@+id/temperature_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
