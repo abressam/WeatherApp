@@ -6,9 +6,9 @@
     <string name="location_icon" translatable="false">Location icon</string>
     <string name="seg_text">Mon</string>
     <string name="date_text">jan 19 2022</string>
-    <string name="main_temperature_text" translatable="false">24 ºC</string>
     <string name="cloudy_sun" translatable="false">Cloudy sun</string>
     <string name="weather_condition_text">Partly cloudy</string>
     <string name="under_line" translatable="false">Under line</string>
     <string name="thermometer_text" translatable="false">Thermometer icon</string>
+    <string name="fahrenheit_symbol" translatable="false">ºF</string>
 </resources>
