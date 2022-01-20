@@ -13,7 +13,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -93,15 +93,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
-        android:text="@string/main_temperature_text"
         android:textColor="@android:color/white"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/dayBackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/location"
         app:layout_constraintVertical_bias="0.153"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        tools:text="24" />
 
     <ImageView
         android:id="@+id/cloudy_sun"
@@ -158,5 +159,31 @@
         app:srcCompat="@drawable/thermometer"
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/thermometer_text" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="58dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:srcCompat="@drawable/whitecircle"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/fahrenheit_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_slab"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_temperature"
+        app:layout_constraintStart_toEndOf="@+id/main_temperature"
+        app:layout_constraintTop_toTopOf="@+id/main_temperature"
+        tools:text="ºF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
