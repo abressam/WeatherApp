@@ -10,24 +10,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fahrenheit: ImageButton = findViewById(R.id.imageButton)
-        fahrenheit.setOnClickListener { convertTemperature() }
+        // call the function to print the celsius temperature on the screen when initialize the app
+        convertToCelsius()
+
+        val fahrenheit: ImageButton = findViewById(R.id.fahrenheit_button)
+        fahrenheit.setOnClickListener { convertToFahrenheit() }
+
+        val celsius: ImageButton = findViewById(R.id.celsius_button)
+        celsius.setOnClickListener { convertToCelsius() }
     }
 
-    private fun convertTemperature() {
-        val temperature = Temperature(24)
-        val changeTemperature = temperature.celsiusToFahrenheit()
+    private fun convertToCelsius() {
+        val fahrenheitTemperature = Temperature(0)
+        val changeFahrenheit = fahrenheitTemperature.fahrenheitToCelsius()
+
+        val celsiusTextView: TextView = findViewById(R.id.main_temperature)
+        celsiusTextView.text = changeFahrenheit.toString()
+
+        val celsiusSymbolTextView: TextView = findViewById(R.id.temperature_symbol)
+        val celsiusSymbolString: String = getString(R.string.celsius_symbol)
+        celsiusSymbolTextView.text = celsiusSymbolString
+    }
+
+    private fun convertToFahrenheit() {
+        val celsiusTemperature = Temperature(0)
+        val changeCelsius = celsiusTemperature.celsiusToFahrenheit()
 
         val fahrenheitTextView: TextView = findViewById(R.id.main_temperature)
-        fahrenheitTextView.text = changeTemperature.toString()
+        fahrenheitTextView.text = changeCelsius.toString()
 
-        val symbolTextView: TextView = findViewById(R.id.fahrenheit_symbol)
-        val symbolString: String = getString(R.string.fahrenheit_symbol)
-        symbolTextView.text = symbolString
+        val fahrenheitSymbolTextView: TextView = findViewById(R.id.temperature_symbol)
+        val fahrenheitSymbolString: String = getString(R.string.fahrenheit_symbol)
+        fahrenheitSymbolTextView.text = fahrenheitSymbolString
     }
 }
 
-class Temperature(val inputTemperature: Int) {
+class Temperature(private val inputTemperature: Int) {
     fun celsiusToFahrenheit(): Int {
         // equation: (°C * (9/5) + 32) = °F
         return (inputTemperature * (9/5) + 32)
