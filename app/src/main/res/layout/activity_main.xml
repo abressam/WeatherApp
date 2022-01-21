@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/menubutton"
+        app:srcCompat="@drawable/menu"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/location"
         app:layout_constraintStart_toEndOf="@+id/menu_button"
         app:layout_constraintTop_toTopOf="@+id/location"
-        app:srcCompat="@drawable/location"
+        app:srcCompat="@drawable/location_icon"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -116,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.837"
-        app:srcCompat="@drawable/cloudysun"
+        app:srcCompat="@drawable/partly_cloudy_morning_icon"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -142,7 +142,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weather_condition"
         app:layout_constraintVertical_bias="0.00999999"
-        app:srcCompat="@drawable/whiteline"
+        app:srcCompat="@drawable/under_line"
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/under_line" />
 
@@ -170,7 +170,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date"
-        app:srcCompat="@drawable/whitecircle"
+        app:srcCompat="@drawable/fahrenheit_without_circle"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
@@ -183,7 +183,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fahrenheit_button"
-        app:srcCompat="@drawable/whitecircle"
+        app:srcCompat="@drawable/celsius_with_circle"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
@@ -197,6 +197,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/main_temperature"
         app:layout_constraintStart_toEndOf="@+id/main_temperature"
         app:layout_constraintTop_toTopOf="@+id/main_temperature"
-        tools:text="ºF" />
+        tools:text="ºC" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
