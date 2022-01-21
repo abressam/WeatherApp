@@ -16,10 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Find the menu button in the layout
         val menuButton: ImageButton = findViewById(R.id.menu_button)
         menuButton.setOnClickListener {
-            // Use intent
+            // Use intent to when the user clicked the button, open the MenuActivity
             val intent = Intent(this, MenuActivity::class.java)
+            // Start the intent val
             startActivity(intent)
         }
 
